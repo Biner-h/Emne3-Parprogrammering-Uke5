@@ -9,16 +9,23 @@ using Emne3_PpUke5;
 
 var grass = new Grass(new List<Pokemon>()
 {
-    new Pokemon("Pikachu"),
-    new Pokemon("Bulbasaur"),
-    new Pokemon("Charizard")
+    new Pokemon("Pikachu", 100),
+    new Pokemon("Bulbasaur", 54),
+    new Pokemon("Charizard", 67)
 });
 
 var water = new Water(new List<Pokemon>()
 {
-    new Pokemon ("Lugia"),
-    new Pokemon("MewTwo"),
-    new Pokemon ("HO-OH")
+    new Pokemon ("Lugia", 65),
+    new Pokemon("MewTwo", 77),
+    new Pokemon ("HO-OH", 23)
+});
+
+var pokeShop = new PokeShop(new List<Items>()
+{
+    new Items("Pokeballs"),
+    new Items("Potion"),
+    new Items("PokeEgg")
 });
 
 Console.WriteLine("Hva heter spilleren?");
@@ -30,6 +37,33 @@ Console.WriteLine();
 
 var person = new Spiller(Name, Health);
 person.showInfo();
+
+while (true)
+{
+    Console.WriteLine("\n1. Gå til gress terreng");
+    Console.WriteLine("\n2. Gå til vann terreng");
+    Console.WriteLine("\n3. Gå til poke shop");
+    Console.WriteLine("\n4. Gå til inventory");
+    var input = Console.ReadLine();
+
+    switch(input)
+    {
+        case "1":
+            grass.GetGrassPokemon(); break;
+
+        case "2":
+            water.GetWaterPokemon(); break;
+        
+        case "3":
+            pokeShop.ShowShop(); break;
+
+        case "4":
+            ; break;
+
+        default: break; 
+    }
+}
+
 
 
 

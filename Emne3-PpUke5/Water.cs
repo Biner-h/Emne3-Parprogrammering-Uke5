@@ -20,6 +20,18 @@ namespace Emne3_PpUke5
             AllPokemons.Add(pokemon);
         }
 
+        public void GetWaterPokemon()
+        {
+            for (int i = 0; i < AllPokemons.Count; i++)
+            {
+                Console.WriteLine($"{i} {AllPokemons[i].Name}");
+            }
+
+            Console.WriteLine("\nSkriv tallet på pokemonen du vil fange.");
+            int input = int.Parse(Console.ReadLine());
+
+            AllPokemons[input].ShowPokemon();
+        }
     }
 }
 

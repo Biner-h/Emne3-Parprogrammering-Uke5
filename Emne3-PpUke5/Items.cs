@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace Emne3_PpUke5
 {
-    internal class Pokemon
+    internal class Items
     {
         public string Name { get; set; }
-        public int Health { get; set; }
 
-        public Pokemon(string name, int health) 
+        public Items(string name)
         {
             Name = name;
-            Health = health; 
         }
 
-        public void ShowPokemon()
+        public void ShowItem()
         {
-            Console.WriteLine($"Name: {Name} HP:{Health}");
+            Console.WriteLine($"Name: {Name}");
         }
+
     }
 }
